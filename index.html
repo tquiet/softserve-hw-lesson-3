@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>True Vinil Sound</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,700i&display=swap&subset=cyrillic"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -14,7 +17,7 @@
         <div class="container">
             <div class="header-top">
                 <div class="header-logo">
-                    <span>True vinil sound</span>
+                    <span>True vinyl sound</span>
                 </div>
                 <nav class="header-nav">
                     <a href="#" class="header-nav__link">Католог</a>
@@ -30,20 +33,24 @@
     </header>
     <section class="vinil-store">
         <div class="container">
-            <h2>Виберіть музику за смаком </h2>
-            <form class="vinil-search">
-                <select name="genre">
-                    <option value="Жанр">Жанр</option>
-                </select>
-                <select name="cost">
-                    <option value="Ціна">Ціна</option>
-                </select>
-                <select name="availability">
-                    <option value="Наявність">Наявність</option>
-                </select>
-                <input type="search" placeholder="Пошук товарів">
-                <input type="submit" value="Go!">
-            </form>
+            <h2 class="vinil-store__title">Виберіть музику за смаком </h2>
+            <div class="vinil-search">
+                <div class="select">
+                    <select name="genre">
+                        <option value="Жанр">Жанр</option>
+                    </select>
+                    <select name="cost">
+                        <option value="Ціна">Ціна</option>
+                    </select>
+                    <select name="availability">
+                        <option value="Наявність">Наявність</option>
+                    </select>
+                </div>
+                <div class="wrap-search">
+                    <input type="search" placeholder="Пошук товарів">
+                    <input type="submit" value="Go!">
+                </div>
+            </div>
             <ul class="vinil-list">
                 <li class="vinil-list__item">
                     <a href="#">
@@ -99,9 +106,11 @@
     </section>
     <section class="player">
         <div class="container">
-            <div class="player-bg">
-                <h2>Програвачі вінілу</h2>
-            </div>
+            <h2>Програвачі вінілу</h2>
+        </div>
+    </section>
+    <section class="player-store">
+        <div class="container">
             <div class="player-list">
                 <div class="player-list__item">
                     <div class="player-info">
@@ -150,36 +159,47 @@
         </div>
     </section>
     <section class="consultation">
-        <h2>Замовити консультацію</h2>
-        <form>
-            <input type="text" placeholder="Ім'я">
-            <input type="text" placeholder="+38 063 000 00 00">
-            <textarea name="user-consultation" cols="30" rows="10" placeholder="Ваше запитання"></textarea>
-            <input type="submit" value="Надіслати">
-        </form>
+        <div class="container">
+            <h2>Замовити консультацію</h2>
+            <form>
+                <div class="user-wrap">
+                    <div class="user-info">
+                        <input class="user-name" type="text" placeholder="Ім'я">
+                        <input class="user-number" type="text" placeholder="+38 063 000 00 00">
+                    </div>
+                    <textarea class="user-question" name="user-consultation" cols="30" rows="5"
+                        placeholder="Ваше запитання"></textarea>
+                </div>
+                <input class="btn-submit" type="submit" value="Надіслати">
+            </form>
+        </div>
     </section>
     <section class="contacts">
-        <div class="contacts-link">
-            <a href="#" class="contacts-link__item">Доставка</a>
-            <a href="#" class="contacts-link__item">Оплата</a>
-            <a href="#" class="contacts-link__item">Мапа проїзду</a>
-            <a href="#" class="contacts-link__item">Контакти</a>
-        </div>
-        <div class="contacts-social">
-            <h3 class="contacts-title">Ми в соціальних мережах</h3>
-            <div class="contacts-social__item">
-                <a href="https://www.facebook.com" target="blank"><img src="img/social/facebook.png"
-                        alt="facebook-social-img"></a>
-                <a href="https://www.instagram.com/" target="blank"><img src="img/social/inst.png"
-                        alt="instagram-social-img"></a>
-                <a href="https://www.youtube.com" target="blank"><img src="img/social/youtube.png"
-                        alt="youtube-social-img"></a>
+        <div class="container">
+            <div class="contacts-link">
+                <a href="#" class="contacts-link__item">Доставка</a>
+                <a href="#" class="contacts-link__item">Оплата</a>
+                <a href="#" class="contacts-link__item">Мапа проїзду</a>
+                <a href="#" class="contacts-link__item">Контакти</a>
+            </div>
+            <div class="contacts-social">
+                <h3 class="contacts-title">Ми в соціальних мережах</h3>
+                <div class="contacts-social__item">
+                    <a href="https://www.facebook.com" target="blank"><img src="img/social/facebook.png"
+                            alt="facebook-social-img"></a>
+                    <a href="https://www.instagram.com/" target="blank"><img src="img/social/inst.png"
+                            alt="instagram-social-img"></a>
+                    <a href="https://www.youtube.com" target="blank"><img src="img/social/youtube.png"
+                            alt="youtube-social-img"></a>
+                </div>
             </div>
         </div>
     </section>
     <footer class="footer">
-        <a href="tel:+380630000000">+38 063 000 00 00</a>
-        <p class="address">Львів, Джорджа Вашингтона, 1</p>
+        <div class="container">
+            <a class="number" href="tel:+380630000000">+38 063 000 00 00</a>
+            <p class="address">Львів, Джорджа Вашингтона, 1</p>
+        </div>
     </footer>
 </body>
 
