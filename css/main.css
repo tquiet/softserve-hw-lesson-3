@@ -105,22 +105,26 @@
 }
 
 .vinil-store .vinil-list {
-    display: flex;
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+    justify-content: space-between;
 }
 
 .vinil-store .vinil-list__item {
-    display: flex;
-    flex-direction: column;
-    margin-right: 100px;
-}
-
-.vinil-store .vinil-list__item:last-child {
-    margin-right: 0;
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin: 5px;
 }
 
 .vinil-store .vinil-list__item img {
-    width: 300px;
+    width: 100%;
+}
+
+.vinil-store .vinil-list__item img:hover {
+    opacity: .5;
+    transition: all .5s;
 }
 
 .vinil-store .vinil-list__item span {
@@ -376,4 +380,170 @@
 
 .footer .address {
     margin-top: 10px;
+}
+
+
+
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 900px;
+    }
+
+    /* --- HEADER --- */
+    .header-top .header-logo {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .header-text .header-title {
+        font-size: 30px;
+    }
+
+    .header-top .header-nav .header-nav__link {
+        font-size: 15px;
+    }
+
+    /* --- SECTION VINIL STORE --- */
+    .vinil-store .vinil-store__title {
+        font-size: 30px;
+    }
+
+    .vinil-store .vinil-search .select select {
+        font-size: 15px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 285px;
+    }
+
+    .vinil-store .vinil-list__item .artist-title {
+        font-size: 15px;
+    }
+
+    .vinil-store .vinil-list__item .album-title {
+        font-size: 15px;
+    }
+
+    .vinil-store .vinil-list__item .price {
+        font-size: 12px;
+    }
+
+    /* --- SECTION PLAYER --- */
+    .player h2 {
+        font-size: 40px;
+    }
+
+    /* --- SECTION CONSULTATION --- */
+    .consultation h2 {
+        font-size: 30px;
+    }
+
+    .user-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultation .user-name {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-number {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-question {
+        width: 350px;
+    }
+
+    /* ---SECTION CONTACTS --- */
+    .contacts .contacts-link .contacts-link__item {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-title {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-social__item img {
+        height: 30px;
+    }
+
+    /* --- FOOTER --- */
+    .footer .number,
+    .address {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:914px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width:899px) {
+    .container {
+        max-width: 890px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 278px;
+    }
+}
+
+@media screen and (max-width:870px) {
+    .container {
+        max-width: 860px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 265px;
+    }
+}
+
+@media screen and (max-width:853px) {
+    .container {
+        max-width: 843px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 260px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 750px;
+    }
+
+    /* --- HEADER --- */
+    .header-top .header-logo {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .vinil-store .vinil-list__item {
+        max-width: 230px;
+    }
+
+    /* --- SECTION PLAYER --- */
+    .player {
+        padding-top: 30px;
+    }
+
+    .player h2 {
+        font-size: 35px;
+    }
+
+    /* --- SECTION PLAYER-STORE --- */
+    .player-list__item .player-img {
+        height: 260px;
+    }
 }
