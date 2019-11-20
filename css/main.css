@@ -2,7 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
+    width: auto;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -37,6 +42,12 @@
     margin-left: 40px;
     letter-spacing: 2px;
     text-decoration: none;
+}
+
+.header-top .header-nav .header-nav__link:hover {
+    outline: none;
+    opacity: 0.5;
+    transition: 0.3s;
 }
 
 .header-top .header-nav .header-nav__link:first-child {
@@ -113,13 +124,14 @@
 }
 
 .vinil-store .vinil-list__item {
-    flex-basis: 300px;
-    flex-grow: 1;
+    /* flex-basis: 300px; */
+    max-width: 30%;
+    /* flex-grow: 1; */
     margin: 5px;
 }
 
 .vinil-store .vinil-list__item img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .vinil-store .vinil-list__item img:hover {
@@ -132,6 +144,10 @@
     margin-top: 10px;
     color: #000;
     font-weight: 400;
+}
+
+.vinil-store .vinil-list__item a {
+    text-decoration: none;
 }
 
 .vinil-store .vinil-list__item a {
@@ -216,9 +232,14 @@
     border-radius: 5px;
 }
 
+.player-list__item .player-info .btn-buy:hover {
+    opacity: .5;
+    transition: all 0.3s;
+}
+
 .player-list__item .player-img {
     display: block;
-    height: 300px;
+    max-height: 300px;
 }
 
 /* --- SECTION CONSULTATION --- */
@@ -296,6 +317,11 @@
     font-size: 15px;
 }
 
+.consultation .btn-submit:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
 .consultation h2 {
     font-size: 40px;
     font-weight: 700;
@@ -320,6 +346,11 @@
     font-weight: 700;
     margin-left: 40px;
     letter-spacing: 1px;
+}
+
+.contacts .contacts-link .contacts-link__item:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
 }
 
 .contacts .contacts-link .contacts-link__item:first-child {
@@ -349,6 +380,11 @@
     margin-left: 60px;
 }
 
+.contacts .contacts-social .contacts-social__item a:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
 .contacts .contacts-social .contacts-social__item a:first-child {
     margin-left: 0px;
 }
@@ -370,6 +406,11 @@
     text-decoration: none;
 }
 
+.footer .number:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
 .footer .number,
 .address {
     color: #fff;
@@ -382,11 +423,11 @@
     margin-top: 10px;
 }
 
+/* --- MEDIA --- */
 
-
-@media screen and (max-width:992px) {
+@media screen and (min-width: 853px) and (max-width:992px) {
     .container {
-        max-width: 900px;
+        max-width: 90%;
     }
 
     /* --- HEADER --- */
@@ -412,9 +453,6 @@
         font-size: 15px;
     }
 
-    .vinil-store .vinil-list__item {
-        max-width: 285px;
-    }
 
     .vinil-store .vinil-list__item .artist-title {
         font-size: 15px;
@@ -478,49 +516,10 @@
 }
 
 
-@media screen and (max-width:914px) {
+
+@media screen and (max-width:852px) {
     .container {
-        max-width: 900px;
-    }
-
-    .vinil-store .vinil-list__item {
-        max-width: 280px;
-    }
-}
-
-@media screen and (max-width:899px) {
-    .container {
-        max-width: 890px;
-    }
-
-    .vinil-store .vinil-list__item {
-        max-width: 278px;
-    }
-}
-
-@media screen and (max-width:870px) {
-    .container {
-        max-width: 860px;
-    }
-
-    .vinil-store .vinil-list__item {
-        max-width: 265px;
-    }
-}
-
-@media screen and (max-width:853px) {
-    .container {
-        max-width: 843px;
-    }
-
-    .vinil-store .vinil-list__item {
-        max-width: 260px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .container {
-        max-width: 750px;
+        max-width: 90%;
     }
 
     /* --- HEADER --- */
@@ -529,8 +528,36 @@
         line-height: 25px;
     }
 
-    .vinil-store .vinil-list__item {
+    .header-top .header-nav .header-nav__link {
+        font-size: 15px;
+    }
+
+    .header-text .header-title {
+        font-size: 30px;
+    }
+
+    /* --- SECTION VINIL STORE --- */
+    .vinil-store .vinil-store__title {
+        font-size: 30px;
+    }
+
+    .vinil-store .vinil-search .select select {
+        font-size: 15px;
+    }
+
+    /* .vinil-store .vinil-list__item {
         max-width: 230px;
+    } */
+    .vinil-store .vinil-list__item .artist-title {
+        font-size: 16px;
+    }
+
+    .vinil-store .vinil-list__item .album-title {
+        font-size: 16px;
+    }
+
+    .vinil-store .vinil-list__item .price {
+        font-size: 13px;
     }
 
     /* --- SECTION PLAYER --- */
@@ -546,4 +573,151 @@
     .player-list__item .player-img {
         height: 260px;
     }
+
+    /* --- SECTION CONSULTATION --- */
+    .consultation h2 {
+        font-size: 30px;
+    }
+
+    .user-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultation .user-name {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-number {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-question {
+        width: 350px;
+    }
+
+    /* ---SECTION CONTACTS --- */
+    .contacts .contacts-link .contacts-link__item {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-title {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-social__item img {
+        height: 30px;
+    }
+
+    /* --- FOOTER --- */
+    .footer .number,
+    .address {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:795px) {
+    .container {
+        max-width: 90%;
+    }
+
+    /* --- HEADER --- */
+    .header-top .header-logo {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .header-top .header-nav .header-nav__link {
+        font-size: 12px;
+    }
+
+    .header-text .header-title {
+        font-size: 25px;
+    }
+
+    /* --- SECTION VINIL STORE --- */
+    .vinil-store .vinil-store__title {
+        font-size: 25px;
+    }
+
+    .vinil-store .vinil-search .select select {
+        font-size: 14px;
+    }
+
+    .vinil-store .vinil-list__item .artist-title {
+        font-size: 14px;
+    }
+
+    .vinil-store .vinil-list__item .album-title {
+        font-size: 14px;
+    }
+
+    .vinil-store .vinil-list__item .price {
+        font-size: 12px;
+    }
+
+    /* --- SECTION PLAYER --- */
+    .player {
+        padding-top: 40px;
+    }
+
+    .player h2 {
+        font-size: 35px;
+    }
+
+    .player-store .player-list .player-list__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .player-list__item .player-info .btn-buy {
+        display: block;
+        text-align: center;
+    }
+
+    /* --- SECTION CONSULTATION --- */
+    .consultation h2 {
+        font-size: 30px;
+    }
+
+    .user-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultation .user-name {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-number {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-question {
+        width: 350px;
+    }
+
+    /* ---SECTION CONTACTS --- */
+    .contacts .contacts-link .contacts-link__item {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-title {
+        font-size: 15px;
+    }
+
+    .contacts .contacts-social .contacts-social__item img {
+        height: 30px;
+    }
+
+    /* --- FOOTER --- */
+    .footer .number,
+    .address {
+        font-size: 15px;
+    }
+
 }
